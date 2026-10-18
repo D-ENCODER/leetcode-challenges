@@ -1,68 +1,36 @@
 # 3. Longest Substring Without Repeating Characters
 
 - **Difficulty:** Medium
-- **Pattern:** Sliding Window
-- **Language:** Python
-- **Time Complexity:** O(n)
-- **Space Complexity:** O(min(m, n))
-- **Runtime:** 97.8% Faster
-- **LeetCode Link:** [https://leetcode.com/problems/longest-substring-without-repeating-characters/](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+- **LeetCode Link:** [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+- **Topics:** `Hash Table`, `Two Pointers`, `Array`
+- **Language:** Python 3
 
-## Approach & Notes
+## Approach & Intuition
 
-Maintained a dynamic sliding window [l, r] with a frequency counter to contract left pointer upon duplicate characters.
+Maintain a sliding window that expands and contracts to ensure no repeating characters are present.
 
----
+- **Step**: Initialize a hash map to track the last index of each character, and variables to track the start of the current window and the maximum length of the substring without repeating characters. 
+- **Step**: Iterate through the string, updating the start of the window if a repeating character is found and updating the hash map with the current character's index. 
+- **Step**: Calculate the length of the current window and update the maximum length if the current window is larger. 
+- **Step**: Return the maximum length of the substring without repeating characters.
 
-## Problem Statement
-
-Given a string `s`, find the length of the **longest substring** without repeating characters.
-
-**Example 1:**
-
-```
-Input: s = "abcabcbb"
-Output: 3
-Explanation: The answer is "abc", with the length of 3.
-```
-
-**Example 2:**
-
-```
-Input: s = "bbbbb"
-Output: 1
-Explanation: The answer is "b", with the length of 1.
-```
-
-**Example 3:**
-
-```
-Input: s = "pwwkew"
-Output: 3
-Explanation: The answer is "wke", with the length of 3.
-Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
-```
-
-**Constraints:**
-
-* `0 <= s.length <= 5 * 104`
-* `s` consists of English letters, digits, symbols and spaces.
-
----
-
-## Solution
+## Python 3 Solution
 
 ```python
-class Solution(object):
-    def lengthOfLongestSubstring(self, s):
-        ans = 0
-        count = Counter()
-        l = 0
-        for r, c in enumerate(s):
-            count[c] += 1
-            while count[c] > 1:
-                count[s[l]] -= 1
-                l += 1
-            ans = max(ans, r - l + 1)
-        return ans
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        char_map = {}
+        left = 0
+        max_len = 0
+        for right, char in enumerate(s):
+            if char in char_map and char_map[char] >= left:
+                left = char_map[char] + 1
+            char_map[char] = right
+            max_len = max(max_len, right - left + 1)
+        return max_len
 ```
+
+## Complexity Analysis
+
+- **Time Complexity:** `O(n)` — The solution uses a single loop that iterates through the string once, making the time complexity linear with respect to the length of the string.
+- **Space Complexity:** `O(min(n, m))` — The hash map stores characters and their indices, with a maximum size of the number of unique characters in the string, which is bounded by the size of the character set (m).

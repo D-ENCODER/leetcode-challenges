@@ -34,7 +34,7 @@ leetcode-challenges/
 | :--- | :--- | :--- | :--- | :--- |
 | 0001 | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟢 Easy | Algorithms | [Python 3](./easy/0001-two-sum.md) |
 | 0002 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | 🟡 Medium | Iteration / Array, Array, Two Pointers | [Python 3](./medium/0002-add-two-numbers.md) |
-| 0003 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 🟡 Medium | Algorithms | [Python 3](./medium/0003-longest-substring-without-repeating-characters.md) |
+| 0003 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 🟡 Medium | Hash Table, Two Pointers, Array | [Python 3](./medium/0003-longest-substring-without-repeating-characters.md) |
 | 0004 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | 🔴 Hard | Algorithms | [Python 3](./hard/0004-median-of-two-sorted-arrays.md) |
 | 0005 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | 🟡 Medium | Algorithms | [Python 3](./medium/0005-longest-palindromic-substring.md) |
 | 0006 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | 🟡 Medium | Algorithms | [Python 3](./medium/0006-zigzag-conversion.md) |
