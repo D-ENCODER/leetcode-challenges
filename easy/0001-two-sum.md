@@ -1,71 +1,34 @@
 # 1. Two Sum
 
 - **Difficulty:** Easy
-- **Pattern:** Hash Map
-- **Language:** Python
-- **Time Complexity:** O(n)
-- **Space Complexity:** O(n)
-- **Runtime:** 98.4% Faster
-- **LeetCode Link:** [https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/two-sum/)
+- **LeetCode Link:** [Two Sum](https://leetcode.com/problems/two-sum/)
+- **Topics:** `Hash Table`, `Array`, `Two Pointers`
+- **Language:** Python 3
 
-## Approach & Notes
+## Approach & Intuition
 
-Single-pass hash table storing seen elements and their indices to resolve target complements in O(1) lookup time.
+By storing each number's index in a hash map as we iterate through the list, we can quickly check if the complement of the current number (to reach the target sum) has already been seen.
 
----
+- **Step**: Initialize an empty hash map to store numbers and their indices.
+- **Step**: Iterate through the list of numbers, for each number calculate its complement with respect to the target.
+- **Step**: Check if the complement exists in the hash map; if it does, return the indices of the complement and the current number.
+- **Step**: If the complement does not exist, store the current number and its index in the hash map.
 
-## Problem Statement
-
-Given an array of integers `nums` and an integer `target`, return _indices of the two numbers such that they add up to `target`_.
-
-You may assume that each input would have _**exactly**_** one solution**, and you may not use the _same_ element twice.
-
-You can return the answer in any order.
-
-**Example 1:**
-
-```
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
-```
-
-**Example 2:**
-
-```
-Input: nums = [3,2,4], target = 6
-Output: [1,2]
-```
-
-**Example 3:**
-
-```
-Input: nums = [3,3], target = 6
-Output: [0,1]
-```
-
-
-
-**Constraints:**
-
-* `2 <= nums.length <= 10^4`
-* `-10^9 <= nums[i] <= 10^9`
-* `-10^9 <= target <= 10^9`
-* **Only one valid answer exists.**
-
-**Follow-up:** Can you come up with an algorithm that is less than `O(n2)` time complexity?
-
----
-
-## Solution
+## Python 3 Solution
 
 ```python
 class Solution:
-    def twoSum(self, nums, target):
-        seen = {}
-        for i in range(len(nums)):
-            complement = target - nums[i]
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        seen = {} 
+        for index, num in enumerate(nums):
+            complement = target - num
             if complement in seen:
-                return seen[complement], i
-            seen[nums[i]] = i
+                return [seen[complement], index]
+            seen[num] = index
+        return []
 ```
+
+## Complexity Analysis
+
+- **Time Complexity:** `O(n)` — The solution iterates through the list of numbers exactly once, performing constant-time operations for each element.
+- **Space Complexity:** `O(n)` — A hash map is used to store up to n elements, where n is the number of elements in the input list.
