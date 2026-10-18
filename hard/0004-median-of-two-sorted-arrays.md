@@ -1,69 +1,32 @@
 # 4. Median of Two Sorted Arrays
 
 - **Difficulty:** Hard
-- **Pattern:** Binary Search
-- **Language:** Python
-- **Time Complexity:** O(log(min(m, n)))
-- **Space Complexity:** O(1)
-- **Runtime:** 99.2% Faster
-- **LeetCode Link:** [https://leetcode.com/problems/median-of-two-sorted-arrays/](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+- **LeetCode Link:** [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+- **Topics:** `Sorting`, `Array`, `Two Pointers`
+- **Language:** Python 3
 
-## Approach & Notes
+## Approach & Intuition
 
-Binary searched the optimal partition index on the smaller array so left and right halves satisfy cross-boundary ordering.
+The core insight is to combine both sorted arrays and find the median of the combined array.
 
----
+- **Step 1**: Concatenate the two input arrays into a single array. - **Step 2**: Sort the combined array. - **Step 3**: Determine the median based on the length of the combined array, checking if it is even or odd.
 
-## Problem Statement
-
-Given two sorted arrays `nums1` and `nums2` of size `m` and `n` respectively, return **the median** of the two sorted arrays.
-
-The overall run time complexity should be `O(log (m+n))`.
-
-
-
-**Example 1:**
-
-```
-Input: nums1 = [1,3], nums2 = [2]
-Output: 2.00000
-Explanation: merged array = [1,2,3] and median is 2.
-```
-
-**Example 2:**
-
-```
-Input: nums1 = [1,2], nums2 = [3,4]
-Output: 2.50000
-Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
-```
-
-
-
-**Constraints:**
-
-* `nums1.length == m`
-* `nums2.length == n`
-* `0 <= m <= 1000`
-* `0 <= n <= 1000`
-* `1 <= m + n <= 2000`
-* `-10^6 <= nums1[i], nums2[i] <= 10^6`
-
----
-
-## Solution
+## Python 3 Solution
 
 ```python
-class Solution(object):
-    def findMedianSortedArrays(self, nums1, nums2):
-        """
-        :type nums1: List[int]
-        :type nums2: List[int]
-        :rtype: float
-        """
-        sort = sorted(nums1 + nums2)
-        if len(sort)%2 == 1:
-            return sort[(len(sort)/2)]
+class Solution:
+    def findMedianSortedArrays(self, nums1: list[int], nums2: list[int]) -> float:
+        nums3 = nums1 + nums2
+        nums3.sort()
+        if len(nums3) % 2 == 0:
+            i1 = floor(len(nums3) / 2)
+            i2 = ceil(len(nums3) / 2)
+            return (nums3[i1 - 1] + nums3[i2]) / 2
         else:
-            return (sort[(len(sort)/2)] + sort[(len(sort)/2) - 1] )/2.0
+            return nums3[len(nums3) // 2]
 ```
+
+## Complexity Analysis
+
+- **Time Complexity:** `O((m + n) log(m + n))` — The time complexity is dominated by the sorting operation, which is O((m + n) log(m + n)), where m and n are the lengths of the two input arrays.
+- **Space Complexity:** `O(m + n)` — The space complexity is O(m + n) due to the creation of a new array that combines both input arrays.
