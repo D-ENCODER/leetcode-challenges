@@ -1,68 +1,57 @@
-# ⚡ LeetCode Challenges — Algorithmic Solution Vault
+# 🧠 LeetCode Challenges — Solution Vault
 
-[![Portfolio Live Sync](https://img.shields.io/badge/Live_Portfolio-het--joshi.web.app-6366f1?style=for-the-badge)](https://het-joshi.web.app)
-[![Solved](https://img.shields.io/badge/Solved-17_Challenges-10b981?style=for-the-badge)]()
-[![Language](https://img.shields.io/badge/Language-Python_3-3b82f6?style=for-the-badge)]()
+![Language](https://img.shields.io/badge/Language-Python_3-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Solved](https://img.shields.io/badge/Solved-17-10B981?style=for-the-badge)
+![Easy](https://img.shields.io/badge/Easy-4-34D399?style=for-the-badge)
+![Medium](https://img.shields.io/badge/Medium-11-FBBF24?style=for-the-badge)
+![Hard](https://img.shields.io/badge/Hard-2-F87171?style=for-the-badge)
 
-Curated collection of **LeetCode algorithmic solutions**, complexity analyses, and problem-solving patterns maintained by **Het Joshi ([@D-ENCODER](https://github.com/D-ENCODER))**.
-
-> **Live Portfolio Integration:** This repository is dynamically connected to **[het-joshi.web.app](https://het-joshi.web.app)**. Any new solution added to `easy/`, `medium/`, or `hard/` automatically appears on the live portfolio website without needing a redeploy!
+A clean, well-organized repository of my **LeetCode** algorithm and data structure solutions in **Python 3**, automatically synced with my live developer portfolio at **[het-joshi.web.app](https://het-joshi.web.app)**.
 
 ---
 
 ## 📂 Repository Folder Structure
 
-Solutions are organized into difficulty directories using a zero-padded 4-digit problem number (`XXXX-problem-slug.md`):
+Solutions are organized into difficulty directories using zero-padded 4-digit problem numbers and kebab-case slugs so they sort cleanly and can be parsed automatically:
 
 ```text
 leetcode-challenges/
-├── README.md                 # Documentation, folder guide & solution index
-├── TEMPLATE.md               # Copy-paste template for adding new problems
-├── easy/                     # 🟢 Easy difficulty solutions
-│   ├── 0001-two-sum.md
-│   ├── 0009-palindrome-number.md
-│   ├── 0013-roman-to-integer.md
-│   └── 0014-longest-common-prefix.md
-├── medium/                   # 🟡 Medium difficulty solutions
-│   ├── 0002-add-two-numbers.md
-│   ├── 0003-longest-substring-without-repeating-characters.md
-│   ├── 0005-longest-palindromic-substring.md
-│   ├── ...
-│   └── 0017-letter-combinations-of-a-phone-number.md
-└── hard/                     # 🔴 Hard difficulty solutions
-    ├── 0004-median-of-two-sorted-arrays.md
-    └── 0010-regular-expression-matching.md
+├── README.md                          # Master index, stats & organization guide
+├── TEMPLATE.md                        # Standard template for adding new solutions
+├── easy/                              # Easy difficulty solutions
+│   └── 0001-two-sum.md
+├── medium/                            # Medium difficulty solutions
+│   └── 0002-add-two-numbers.md
+└── hard/                              # Hard difficulty solutions
+    └── 0004-median-of-two-sorted-arrays.md
 ```
 
 ---
 
-## ➕ How to Add a New Solution
+## 📊 Solved Problems Index (17)
 
-1. Copy [`TEMPLATE.md`](./TEMPLATE.md) into the appropriate difficulty folder (`easy/`, `medium/`, or `hard/`).
-2. Name the file `XXXX-problem-slug.md` (e.g., `medium/0018-4sum.md` or even a raw code file like `medium/0018-4sum.py`).
-3. Fill in the metadata bullets (`Difficulty`, `Pattern`, `Time Complexity`, `Space Complexity`), your `Approach & Notes`, and the `Solution` code block.
-4. Commit and push to `main` — your portfolio at **[het-joshi.web.app](https://het-joshi.web.app)** will automatically parse the new file and update your live stats and interactive code viewer!
+| # | Problem | Difficulty | Topics | Solution |
+| :--- | :--- | :--- | :--- | :--- |
+| 0001 | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟢 Easy | Algorithms | [Python 3](./easy/0001-two-sum.md) |
+| 0002 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | 🟡 Medium | Iteration / Array, Array, Two Pointers | [Python 3](./medium/0002-add-two-numbers.md) |
+| 0003 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 🟡 Medium | Algorithms | [Python 3](./medium/0003-longest-substring-without-repeating-characters.md) |
+| 0004 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | 🔴 Hard | Algorithms | [Python 3](./hard/0004-median-of-two-sorted-arrays.md) |
+| 0005 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | 🟡 Medium | Algorithms | [Python 3](./medium/0005-longest-palindromic-substring.md) |
+| 0006 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | 🟡 Medium | Algorithms | [Python 3](./medium/0006-zigzag-conversion.md) |
+| 0007 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | 🟡 Medium | Algorithms | [Python 3](./medium/0007-reverse-integer.md) |
+| 0008 | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | 🟡 Medium | Algorithms | [Python 3](./medium/0008-string-to-integer-atoi.md) |
+| 0009 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | 🟢 Easy | Algorithms | [Python 3](./easy/0009-palindrome-number.md) |
+| 0010 | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | 🔴 Hard | Algorithms | [Python 3](./hard/0010-regular-expression-matching.md) |
+| 0011 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | 🟡 Medium | Algorithms | [Python 3](./medium/0011-container-with-most-water.md) |
+| 0012 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | 🟡 Medium | Algorithms | [Python 3](./medium/0012-integer-to-roman.md) |
+| 0013 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | 🟢 Easy | Algorithms | [Python 3](./easy/0013-roman-to-integer.md) |
+| 0014 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | 🟢 Easy | Algorithms | [Python 3](./easy/0014-longest-common-prefix.md) |
+| 0015 | [3Sum](https://leetcode.com/problems/3sum/) | 🟡 Medium | Algorithms | [Python 3](./medium/0015-3sum.md) |
+| 0016 | [3Sum Closest](https://leetcode.com/problems/3sum-closest/) | 🟡 Medium | Algorithms | [Python 3](./medium/0016-3sum-closest.md) |
+| 0017 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | 🟡 Medium | Algorithms | [Python 3](./medium/0017-letter-combinations-of-a-phone-number.md) |
 
 ---
 
-## 📊 Solved Problems Index (17 Total: 4 Easy • 11 Medium • 2 Hard)
+## ⚡ Automated Portfolio Integration
 
-| # | Problem Title | Difficulty | Algorithmic Pattern | Time | Space |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 0001 | [Two Sum](./easy/0001-two-sum.md) | 🟢 Easy | `Hash Map` | `O(n)` | `O(n)` |
-| 0002 | [Add Two Numbers](./medium/0002-add-two-numbers.md) | 🟡 Medium | `Linked List` | `O(max(m, n))` | `O(max(m, n))` |
-| 0003 | [Longest Substring Without Repeating Characters](./medium/0003-longest-substring-without-repeating-characters.md) | 🟡 Medium | `Sliding Window` | `O(n)` | `O(min(m, n))` |
-| 0004 | [Median of Two Sorted Arrays](./hard/0004-median-of-two-sorted-arrays.md) | 🔴 Hard | `Binary Search` | `O(log(min(m, n)))` | `O(1)` |
-| 0005 | [Longest Palindromic Substring](./medium/0005-longest-palindromic-substring.md) | 🟡 Medium | `Two Pointers / Center Expansion` | `O(n²)` | `O(1)` |
-| 0006 | [Zigzag Conversion](./medium/0006-zigzag-conversion.md) | 🟡 Medium | `String / Matrix Simulation` | `O(n)` | `O(n)` |
-| 0007 | [Reverse Integer](./medium/0007-reverse-integer.md) | 🟡 Medium | `Math & Bit Manipulation` | `O(log₁₀(x))` | `O(1)` |
-| 0008 | [String to Integer (atoi)](./medium/0008-string-to-integer-atoi.md) | 🟡 Medium | `String Parsing / Deterministic State` | `O(n)` | `O(1)` |
-| 0009 | [Palindrome Number](./easy/0009-palindrome-number.md) | 🟢 Easy | `Math` | `O(log₁₀(n))` | `O(1)` |
-| 0010 | [Regular Expression Matching](./hard/0010-regular-expression-matching.md) | 🔴 Hard | `Dynamic Programming` | `O(m · n)` | `O(m · n)` |
-| 0011 | [Container With Most Water](./medium/0011-container-with-most-water.md) | 🟡 Medium | `Two Pointers` | `O(n)` | `O(1)` |
-| 0012 | [Integer to Roman](./medium/0012-integer-to-roman.md) | 🟡 Medium | `Greedy / Value Mapping` | `O(1)` | `O(1)` |
-| 0013 | [Roman to Integer](./easy/0013-roman-to-integer.md) | 🟢 Easy | `Hash Map / Left-to-Right Pass` | `O(n)` | `O(1)` |
-| 0014 | [Longest Common Prefix](./easy/0014-longest-common-prefix.md) | 🟢 Easy | `Vertical Scanning` | `O(S)` | `O(1)` |
-| 0015 | [3Sum](./medium/0015-3sum.md) | 🟡 Medium | `Sorting + Two Pointers` | `O(n²)` | `O(1)` |
-| 0016 | [3Sum Closest](./medium/0016-3sum-closest.md) | 🟡 Medium | `Sorting + Two Pointers` | `O(n²)` | `O(1)` |
-| 0017 | [Letter Combinations of a Phone Number](./medium/0017-letter-combinations-of-a-phone-number.md) | 🟡 Medium | `Backtracking / Combinations` | `O(4ⁿ · n)` | `O(n)` |
+This repository powers the interactive **LeetCode Progress & Solution Vault** slide on [het-joshi.web.app](https://het-joshi.web.app), fetching the repository tree and solution markdown directly via the GitHub API.
